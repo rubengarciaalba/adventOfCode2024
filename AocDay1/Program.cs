@@ -10,6 +10,7 @@ namespace AocDay1
             var destinations = new List<int>() { 4, 3, 5, 3, 9, 3 };
 
             PrintDistance(origins, destinations);
+            PrintSimilarityScore(origins, destinations);
         }
 
         private static void PrintDistance(List<int> origins, List<int> destinations)
@@ -38,6 +39,25 @@ namespace AocDay1
             }
 
             Console.WriteLine($"The total distance is: {distance}");
+        }
+
+        private static void PrintSimilarityScore(List<int> origins, List<int> destinations)
+        {
+            var score = 0;
+
+            var existingSimilarityScores = new Dictionary<int, int>();
+
+            foreach (var o in origins)
+            {
+                if (!existingSimilarityScores.ContainsKey(o))
+                {
+                    existingSimilarityScores.Add(o, destinations.Count(d => d == o));
+                }
+
+                score += o * existingSimilarityScores[o];
+            }
+
+            Console.WriteLine($"The similarity score is {score}");
         }
     }
 }
