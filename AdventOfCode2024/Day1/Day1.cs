@@ -1,10 +1,10 @@
 ﻿using System.Runtime.CompilerServices;
 
-namespace AocDay1
+namespace AdventOfCode2024.Day1
 {
-    internal class Program
+    public class Day1
     {
-        static void Main(string[] args)
+        public Day1()
         {
             var origins = new List<int>() { 3, 4, 2, 1, 3, 3 };
             var destinations = new List<int>() { 4, 3, 5, 3, 9, 3 };
@@ -12,8 +12,8 @@ namespace AocDay1
             PrintDistance(origins, destinations);
             PrintSimilarityScore(origins, destinations);
         }
-
-        private static void PrintDistance(List<int> origins, List<int> destinations)
+        
+        private void PrintDistance(List<int> origins, List<int> destinations)
         {
             var distance = 0;
 
@@ -41,7 +41,7 @@ namespace AocDay1
             Console.WriteLine($"The total distance is: {distance}");
         }
 
-        private static void PrintSimilarityScore(List<int> origins, List<int> destinations)
+        private void PrintSimilarityScore(List<int> origins, List<int> destinations)
         {
             var score = 0;
 
