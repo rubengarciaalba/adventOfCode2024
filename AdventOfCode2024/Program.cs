@@ -47,6 +47,11 @@ namespace AdventOfCode2024
                         new Day2.Day2();
                         
                         break;
+
+                    case 3:
+                        new Day3.Day3();
+
+                        break;
                     default:
                         Console.WriteLine($"There is not a valid class for day {day}");
                         break;
