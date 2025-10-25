@@ -12,6 +12,7 @@ namespace AdventOfCode2024
             Console.WriteLine("1 - Day 1");
             Console.WriteLine("2 - Day 2");
             Console.WriteLine("3 - Day 3");
+            Console.WriteLine("3 - Day 4");
             Console.WriteLine("x - Exit");
 
             var stop = false;
@@ -50,6 +51,10 @@ namespace AdventOfCode2024
 
                     case 3:
                         new Day3.Day3();
+
+                        break;
+                    case 4:
+                        new Day4.Day4();
 
                         break;
                     default:
